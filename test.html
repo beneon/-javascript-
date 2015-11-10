@@ -1,18 +1,20 @@
 <head>
-  <script>
-  var stringA = "some text"
-  function testRun(){
-    var a = 4
-    var b = 7
-    console.log(a*b)
-    console.log(b)
-    b="string again"
-    console.log(b)
-    console.log(334 * (17+20/2))
-  }
-  </script>
-</head>
-<body onload="testRun()">
-  loaded
 
+</head>
+<body>
+  loaded
+  <script>
+  var minVal = 4
+var maxVal = 6
+var testVal = 6
+if(testVal<minVal){
+  console.log("testVal is smaller than minimal value")
+}
+if(testVal>=minVal && testVal<maxVal){
+  console.log("testVal is between minimal and maximal value")
+}
+if(testVal>=maxVal){
+  console.log("testVal is larger than maximal value")
+}
+  </script>
 </body>
