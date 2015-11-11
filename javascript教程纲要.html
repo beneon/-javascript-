@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='go.js'></script>
+  <script>
+    function init(){
+      var fruit = 'orange';
+
+    }
+  </script>
+</head>
+<body onload='init()'>
+
+  <h2 id="introduction">introduction</h2>
+  <p>console.log(&#39;hello&#39;);</p>
+  <h2 id="variables">variables</h2>
+  <p>Make the variable example equal to the value &#39;some string&#39;.</p>
+  <p>Then use console.log() to print the example variable to the console.</p>
+  <h2 id="string">string</h2>
+  <p>In that file create a variable named someString like this:</p>
+  <p>var someString = &#39;this is a string&#39;;</p>
+  <p>Use console.log to print the variable someString to the terminal.</p>
+  <h2 id="string-length">string length</h2>
+  <p>Assign the string &#39;example string&#39; to the variable example.</p>
+  <p>Use console.log to print the length of the string to the terminal.</p>
+  <h2 id="revising-strings">revising strings</h2>
+  <p>Define a variable named pizza that references this string: pizza is alright</p>
+  <p>Use the .replace() method to change alright to wonderful.</p>
+  <p>Use console.log() to print the results of the .replace() method to the terminal.</p>
+  <h2 id="numbers">numbers</h2>
+  <p>In that file define a variable named example that references the integer 123456789.</p>
+  <p>Use console.log() to print that number to the terminal.</p>
+  <h2 id="rounding-numbers">rounding numbers</h2>
+  <p>In that file define a variable named roundUp that references the float 1.5.</p>
+  <p>We will use the Math.round() method to round the number up.</p>
+  <p>An example of using Math.round():</p>
+  <p>Math.round(0.5);</p>
+  <p>Define a second variable named rounded that references the output of the Math.round() method, passing in the roundUp variable as the argument.</p>
+  <p>Use console.log() to print that number to the terminal.</p>
+  <h2 id="to-string">to string</h2>
+  <p>In that file define a variable named n that references the number 128;</p>
+  <p>Call the .toString() method on the n variable.</p>
+  <p>Use console.log() to print the results of the .toString() method to the terminal.</p>
+  <h2 id="if">if</h2>
+  <p>In that file, declare a variable named fruit.</p>
+  <p>Make the fruit variable reference the value orange with the type of String.</p>
+  <p>Then use console.log() to print &quot;The fruit name has more than five characters.&quot; if the length of the value of fruit is greater than five.
+  Otherwise, print &quot;The fruit name has five characters or less.&quot;</p>
+  <h2 id="for">for</h2>
+  <p>In that file define a variable named total and make it equal the number 0.</p>
+  <p>Define a second variable named limit and make it equal the number 10.</p>
+  <p>Create a for loop with a variable i starting at 0 and increasing by 1 each time through the loop. The loop should run as long as i is less than limit.</p>
+  <p>On each iteration of the loop, add the number i to the total variable. To do this, you can use this statement:</p>
+  <p>total += i;</p>
+  <p>After the for loop, use console.log() to print the total variable to the terminal.</p>
+  <h2 id="arrays">arrays</h2>
+  <p>In that file define a variable named pizzaToppings that references an array that contains three strings in this order: tomato sauce, cheese, pepperoni.</p>
+  <p>Use console.log() to print the pizzaToppings array to the terminal.</p>
+  <h2 id="array-filtering">array filtering</h2>
+  <p>In that file, define a variable named numbers that references this array:</p>
+  <p>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];</p>
+  <p>Like above, define a variable named filtered that references the result of numbers.filter().</p>
+  <p>The function that you pass to the .filter() method will look something like this:</p>
+  <p>function evenNumbers (number) {
+    return number % 2 === 0;
+  }</p>
+  <p>Use console.log() to print the filtered array to the terminal.</p>
+  <h2 id="array-accessing">array accessing</h2>
+  <p>In that file, define array food :</p>
+  <p>var food = [&#39;apple&#39;, &#39;pizza&#39;, &#39;pear&#39;];</p>
+  <p>Use console.log() to print the second value of array to the terminal.</p>
+  <h2 id="looping-through-arrays">looping through arrays</h2>
+  <p>In that file, define a variable named pets that references this array:</p>
+  <p>[&#39;cat&#39;, &#39;dog&#39;, &#39;rat&#39;];</p>
+  <p>Create a for loop that changes each string in the array so that they are plural.</p>
+  <p>You will use a statement like this inside the for loop:</p>
+  <p>pets[i] = pets[i] + &#39;s&#39;;</p>
+  <p>After the for loop, use console.log() to print the pets array to the terminal.</p>
+  <h2 id="object">object</h2>
+  <p>In that file, define a variable named pizza like this:</p>
+  <p>var pizza = {
+    toppings: [&#39;cheese&#39;, &#39;sauce&#39;, &#39;pepperoni&#39;],
+    crust: &#39;deep dish&#39;,
+    serves: 2
+  }</p>
+  <p>Use console.log() to print the pizza object to the terminal.</p>
+  <h2 id="object-properties">object properties</h2>
+  <p>In that file, define a variable named food like this:</p>
+  <p>var food = {
+    types: &#39;only pizza&#39;
+  };</p>
+  <p>Use console.log() to print the types property of the food object to the terminal.</p>
+  <h2 id="functions">functions</h2>
+  <p>In that file, define a function named eat that takes an argument named food
+  that is expected to be a string.</p>
+  <p>Inside the function return the food argument like this:</p>
+  <p>return food + &#39; tasted really good.&#39;;</p>
+  <p>Inside of the parentheses of console.log(), call the eat() function with the string bananas as the argument.</p>
+  <h2 id="functions-argument">functions argument</h2>
+  <p>In that file, define a function named math that takes three arguments. It&#39;s important for you to understand that arguments names are only used to reference them.</p>
+  <p>Name each argument as you like.</p>
+  <p>The function math should multiply the second and third arguments, then add the first argument to the outcome of the multiplication and return the value obtained.</p>
+  <p>After that, inside the parentheses of console.log(), call the math() function with the number 53 as first argument, the number 61 as second and the number 67 as third argument.</p>
+  <h2 id="scope">scope</h2>
+  <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>var&nbsp;a&nbsp;=&nbsp;1,&nbsp;b&nbsp;=&nbsp;2,&nbsp;c&nbsp;=&nbsp;3;</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>(function&nbsp;firstFunction(){</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>var&nbsp;b&nbsp;=&nbsp;5,&nbsp;c&nbsp;=&nbsp;6;</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>(function&nbsp;secondFunction(){</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>var&nbsp;b&nbsp;=&nbsp;8;</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>(function&nbsp;thirdFunction(){</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>var&nbsp;a&nbsp;=&nbsp;7,&nbsp;c&nbsp;=&nbsp;9;</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>(function&nbsp;fourthFunction(){</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>var&nbsp;a&nbsp;=&nbsp;1,&nbsp;c&nbsp;=&nbsp;8;</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>})();</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>})();</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>})();</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>})();</span></span></span></div></pre><p>Use your knowledge of the variables&#39; scope and place the following code inside one of the functions in &#39;scope.js&#39;
+  so the output is a: 1, b: 8,c: 6</p>
+  <p>console.log(&quot;a: &quot;+a+&quot;, b: &quot;+b+&quot;,c: &quot;+c);</p>
+
+</body>
+</html>
