@@ -1,17 +1,22 @@
 <head>
-
-</head>
-<body>
-  loaded
   <script>
-  var result = ""
-  for(var rowNum = 0;rowNum<3;rowNum++){
-    for(var colNum=0;colNum<4;colNum++){
-      var currentNum = rowNum*4+colNum+1;
-      result = result + currentNum +","
+
+    function testRun(){
+      var result = multiply(2,3)
+      var result = devide(result,8)
+      function multiply(f1,f2) {
+        return f1*f2
+      }
+      function devide(f1,f2){
+        return f1/f2;
+      }
+      console.log(result)
+
     }
-    result = result + "\n"
-  }
-  console.log(result)
+
   </script>
+</head>
+<body onload="testRun()">
+  loaded
+
 </body>
