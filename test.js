@@ -48,3 +48,24 @@ console.log(lucyId.descript())
 console.log(johnId.descript())
 console.log(typeof true)
 console.log("ccc".indexOf("p"))
+
+function isPrime(n){
+  var isPrimeNum = true
+  for(var b=2;b<n;b++){
+    var mod = n%b
+    if(mod==0){
+      isPrimeNum = false
+      break;
+    }else{
+      isPrimeNum = true
+    }
+  }
+  return isPrimeNum
+}
+//这个函数就是获取一个数字，然后判断这个数字是不是质数
+//接下来对3到100的数字应用这个函数
+for(var n = 3;n<=100;n++){
+  if(isPrime(n)){
+    console.log(n)
+  }
+}

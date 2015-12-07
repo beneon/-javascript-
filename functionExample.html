@@ -1,0 +1,49 @@
+<body>
+  <script>
+  //这个是之前算质数的那个程序
+  for(var n=3;n<=100;n++){
+    var isz = false
+    for(var b=2;b<n;b++){
+      var mod = n%b
+      if(mod==0){
+        isz = false
+        break;
+      }else{
+        isz = true
+      }
+    }
+      if(isz){console.log(n)}
+  }
+
+  //如果把内层循环用函数的形式写出来应该这样写：
+  //首先是声明函数：
+  function isPrime(n){
+    var isPrimeNum = true
+    for(var b=2;b<n;b++){
+      var mod = n%b
+      if(mod==0){
+        isPrimeNum = false
+        break;
+      }else{
+        isPrimeNum = true
+      }
+    }
+    return isPrimeNum
+  }
+  //这个函数就是获取一个数字，然后判断这个数字是不是质数
+  //接下来对3到100的数字应用这个函数
+  for(var n = 3;n<=100;n++){
+    if(isPrime(n)){
+      console.log(n)
+    }
+  }
+  //那么如果接下来要让一个数组记录这些质数，还可以用刚才写的那个函数isPrime：
+  var primeArr = new Array()
+  for(var n = 3;n<=100;n++){
+    if(isPrime(n)){
+      primeArr.push(n)
+      //push()是往一个数组末尾添加一个元素的方法
+    }
+  }
+  </script>
+</body>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- these 3 lines is must have -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>课程表 v1.0</title>
+  <!-- <link href="bootstrap/css/normalize.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>节数</th>
+      <th>星期一</th>
+      <th>星期二</th>
+      <th>星期三</th>
+      <th>星期四</th>
+      <th>星期五</th>
+    </tr>
+    <tr>
+      <td>第一节</td>
+      <td id="mon1st"></td>
+      <td id="tue1st"></td>
+      <td id="wed1st"></td>
+      <td id="thu1st"></td>
+      <td id="fri1st"></td>
+    </tr>
+    <tr>
+      <td>第二节</td>
+      <td id="mon2nd"></td>
+      <td id="tue2nd"></td>
+      <td id="wed2nd"></td>
+      <td id="thu2nd"></td>
+      <td id="fri2nd"></td>
+    </tr>
+    <tr>
+      <td>第三节</td>
+      <td id="mon3rd"></td>
+      <td id="tue3rd"></td>
+      <td id="wed3rd"></td>
+      <td id="thu3rd"></td>
+      <td id="fri3rd"></td>
+    </tr>
+    <tr>
+      <td>第四节</td>
+      <td id="mon4th"></td>
+      <td id="tue4th"></td>
+      <td id="wed4th"></td>
+      <td id="thu4th"></td>
+      <td id="fri4th"></td>
+    </tr>
+    <tr>
+      <td>第五节</td>
+      <td id="mon5th"></td>
+      <td id="tue5th"></td>
+      <td id="wed5th"></td>
+      <td id="thu5th"></td>
+      <td id="fri5th"></td>
+    </tr>
+    <tr>
+      <td>第六节</td>
+      <td id="mon6th"></td>
+      <td id="tue6th"></td>
+      <td id="wed6th"></td>
+      <td id="thu6th"></td>
+      <td id="fri6th"></td>
+    </tr>
+    <tr>
+      <td>第七节</td>
+      <td id="mon7th"></td>
+      <td id="tue7th"></td>
+      <td id="wed7th"></td>
+      <td id="thu7th"></td>
+      <td id="fri7th"></td>
+    </tr>
+    <tr>
+      <td>第八节</td>
+      <td id="mon8th"></td>
+      <td id="tue8th"></td>
+      <td id="wed8th"></td>
+      <td id="thu8th"></td>
+      <td id="fri8th"></td>
+    </tr>
+
+  </table>
+  <script>
+    var tt = {
+      mondayClasses:["英语","英语","数学","数学","基础护理","基础护理","",""],
+      tuesdayClasses:["思修","思修","护理研究","护理研究","","","",""],
+      wednesdayClasses:["生物","生物","物理","物理","基础护理","基础护理","",""],
+      thursdayClasses:["化学","化学","","","营养学","营养学","",""],
+      fridayClasses:["物理","物理","数学","数学","基础护理","基础护理","实验课","实验课"],
+    }
+    var mon1stCell = document.getElementById("mon1st")
+    var mon2ndCell = document.getElementById("mon2nd")
+    var mon3rdCell = document.getElementById("mon3rd")
+    var mon4thCell = document.getElementById("mon4th")
+    var mon5thCell = document.getElementById("mon5th")
+    var mon6thCell = document.getElementById("mon6th")
+    var mon7thCell = document.getElementById("mon7th")
+    var mon8thCell = document.getElementById("mon8th")
+
+    var tue1stCell = document.getElementById("tue1st")
+    var tue2ndCell = document.getElementById("tue2nd")
+    var tue3rdCell = document.getElementById("tue3rd")
+    var tue4thCell = document.getElementById("tue4th")
+    var tue5thCell = document.getElementById("tue5th")
+    var tue6thCell = document.getElementById("tue6th")
+    var tue7thCell = document.getElementById("tue7th")
+    var tue8thCell = document.getElementById("tue8th")
+
+    var wed1stCell = document.getElementById("wed1st")
+    var wed2ndCell = document.getElementById("wed2nd")
+    var wed3rdCell = document.getElementById("wed3rd")
+    var wed4thCell = document.getElementById("wed4th")
+    var wed5thCell = document.getElementById("wed5th")
+    var wed6thCell = document.getElementById("wed6th")
+    var wed7thCell = document.getElementById("wed7th")
+    var wed8thCell = document.getElementById("wed8th")
+
+    var thu1stCell = document.getElementById("thu1st")
+    var thu2ndCell = document.getElementById("thu2nd")
+    var thu3rdCell = document.getElementById("thu3rd")
+    var thu4thCell = document.getElementById("thu4th")
+    var thu5thCell = document.getElementById("thu5th")
+    var thu6thCell = document.getElementById("thu6th")
+    var thu7thCell = document.getElementById("thu7th")
+    var thu8thCell = document.getElementById("thu8th")
+
+    var fri1stCell = document.getElementById("fri1st")
+    var fri2ndCell = document.getElementById("fri2nd")
+    var fri3rdCell = document.getElementById("fri3rd")
+    var fri4thCell = document.getElementById("fri4th")
+    var fri5thCell = document.getElementById("fri5th")
+    var fri6thCell = document.getElementById("fri6th")
+    var fri7thCell = document.getElementById("fri7th")
+    var fri8thCell = document.getElementById("fri8th")
+    mon1stCell.innerHTML=tt.mondayClasses[0]
+    mon2ndCell.innerHTML=tt.mondayClasses[1]
+    mon3rdCell.innerHTML=tt.mondayClasses[2]
+    mon4thCell.innerHTML=tt.mondayClasses[3]
+    mon5thCell.innerHTML=tt.mondayClasses[4]
+    mon6thCell.innerHTML=tt.mondayClasses[5]
+    mon7thCell.innerHTML=tt.mondayClasses[6]
+    mon8thCell.innerHTML=tt.mondayClasses[7]
+    tue1stCell.innerHTML=tt.tuesdayClasses[0]
+    tue2ndCell.innerHTML=tt.tuesdayClasses[1]
+    tue3rdCell.innerHTML=tt.tuesdayClasses[2]
+    tue4thCell.innerHTML=tt.tuesdayClasses[3]
+    tue5thCell.innerHTML=tt.tuesdayClasses[4]
+    tue6thCell.innerHTML=tt.tuesdayClasses[5]
+    tue7thCell.innerHTML=tt.tuesdayClasses[6]
+    tue8thCell.innerHTML=tt.tuesdayClasses[7]
+    wed1stCell.innerHTML=tt.wednesdayClasses[0]
+    wed2ndCell.innerHTML=tt.wednesdayClasses[1]
+    wed3rdCell.innerHTML=tt.wednesdayClasses[2]
+    wed4thCell.innerHTML=tt.wednesdayClasses[3]
+    wed5thCell.innerHTML=tt.wednesdayClasses[4]
+    wed6thCell.innerHTML=tt.wednesdayClasses[5]
+    wed7thCell.innerHTML=tt.wednesdayClasses[6]
+    wed8thCell.innerHTML=tt.wednesdayClasses[7]
+    thu1stCell.innerHTML=tt.thursdayClasses[0]
+    thu2ndCell.innerHTML=tt.thursdayClasses[1]
+    thu3rdCell.innerHTML=tt.thursdayClasses[2]
+    thu4thCell.innerHTML=tt.thursdayClasses[3]
+    thu5thCell.innerHTML=tt.thursdayClasses[4]
+    thu6thCell.innerHTML=tt.thursdayClasses[5]
+    thu7thCell.innerHTML=tt.thursdayClasses[6]
+    thu8thCell.innerHTML=tt.thursdayClasses[7]
+    fri1stCell.innerHTML=tt.fridayClasses[0]
+    fri2ndCell.innerHTML=tt.fridayClasses[1]
+    fri3rdCell.innerHTML=tt.fridayClasses[2]
+    fri4thCell.innerHTML=tt.fridayClasses[3]
+    fri5thCell.innerHTML=tt.fridayClasses[4]
+    fri6thCell.innerHTML=tt.fridayClasses[5]
+    fri7thCell.innerHTML=tt.fridayClasses[6]
+    fri8thCell.innerHTML=tt.fridayClasses[7]
+  </script>
+</body>
+</html>
