@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- these 3 lines is must have -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>课程表 v1.0</title>
+  <!-- <link href="bootstrap/css/normalize.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>节数</th>
+      <th>星期一</th>
+      <th>星期二</th>
+      <th>星期三</th>
+      <th>星期四</th>
+      <th>星期五</th>
+    </tr>
+    <tr>
+      <td>第一节</td>
+      <td id="mon1"></td>
+      <td id="tue1"></td>
+      <td id="wed1"></td>
+      <td id="thu1"></td>
+      <td id="fri1"></td>
+    </tr>
+    <tr>
+      <td>第二节</td>
+      <td id="mon2"></td>
+      <td id="tue2"></td>
+      <td id="wed2"></td>
+      <td id="thu2"></td>
+      <td id="fri2"></td>
+    </tr>
+    <tr>
+      <td>第三节</td>
+      <td id="mon3"></td>
+      <td id="tue3"></td>
+      <td id="wed3"></td>
+      <td id="thu3"></td>
+      <td id="fri3"></td>
+    </tr>
+    <tr>
+      <td>第四节</td>
+      <td id="mon4"></td>
+      <td id="tue4"></td>
+      <td id="wed4"></td>
+      <td id="thu4"></td>
+      <td id="fri4"></td>
+    </tr>
+    <tr>
+      <td>第五节</td>
+      <td id="mon5"></td>
+      <td id="tue5"></td>
+      <td id="wed5"></td>
+      <td id="thu5"></td>
+      <td id="fri5"></td>
+    </tr>
+    <tr>
+      <td>第六节</td>
+      <td id="mon6"></td>
+      <td id="tue6"></td>
+      <td id="wed6"></td>
+      <td id="thu6"></td>
+      <td id="fri6"></td>
+    </tr>
+    <tr>
+      <td>第七节</td>
+      <td id="mon7"></td>
+      <td id="tue7"></td>
+      <td id="wed7"></td>
+      <td id="thu7"></td>
+      <td id="fri7"></td>
+    </tr>
+    <tr>
+      <td>第八节</td>
+      <td id="mon8"></td>
+      <td id="tue8"></td>
+      <td id="wed8"></td>
+      <td id="thu8"></td>
+      <td id="fri8"></td>
+    </tr>
+
+  </table>
+
+  <p id="textF">
+  这里的内容会在载入以后发生改变
+  </p>
+  <script>
+  var t = document.getElementById("textF")
+  t.innerHTML = "网页已经载入完成了"
+  </script>
+  <script>
+  var tt = {
+    mondayClasses:["英语","英语","数学","数学","基础护理","基础护理","",""],
+    tuesdayClasses:["思修","思修","护理研究","护理研究","","","",""],
+    wednesdayClasses:["生物","生物","物理","物理","基础护理","基础护理","",""],
+    thursdayClasses:["化学","化学","","","营养学","营养学","",""],
+    fridayClasses:["物理","物理","数学","数学","基础护理","基础护理","实验课","实验课"],
+  }
+  var ttArr = new Array()
+  ttArr["mon"]=tt.mondayClasses
+  ttArr["tue"]=tt.tuesdayClasses
+  ttArr["wed"]=tt.wednesdayClasses
+  ttArr["thu"]=tt.thursdayClasses
+  ttArr["fri"]=tt.fridayClasses
+
+    var weekdays = ["mon","tue","wed","thu","fri"]
+    for(var weekind=0;weekind<5;weekind++){
+      for(var classNum=0;classNum<8;classNum++){
+        console.log(weekdays[weekind]+classNum)
+        cellUpdate(weekdays[weekind],classNum)
+      }
+    }
+    function getCellContent(weekday,classNum){
+      var classesForSomeDay = ttArr[weekday]
+      var classTitle = classesForSomeDay[classNum]
+      return classTitle
+    }
+    function cellUpdate(weekday,classNum){
+      document.getElementById(""+weekday+(classNum+1)).innerHTML=getCellContent(weekday,classNum)
+    }
+  </script>
+</body>
+</html>

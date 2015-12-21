@@ -1,71 +1,33 @@
-function CardTemplate(){
-  var nameStr,maleBool,idNum,birthStr,job
-  this.init=function(nameStr,maleBool,idNum,birthStr){
-    if(typeof nameStr == "string"){
-      this.nameStr = nameStr
-    }else{
-      this.nameStr = null
-      console.log("wrong input for name")
-    }
-    if(typeof maleBool == "boolean"){
-      this.maleBool = maleBool
-    }else{
-      this.maleBool = null
-      console.log("wrong input for maleBool")
-    }
-    if(typeof idNum == "number"){
-      this.idNum = idNum
-    }else{
-      this.idNum = null
-      console.log("wrong input for id")
-    }
-    this.birthStr = birthStr
-    this.job = "programmer"
-  }
-  this.descript = function(){
-    var descriptStr = "name: "+this.nameStr+" "
-    if(this.maleBool == null){
-      descriptStr += "sex: unknown "
-    }else{
-      descriptStr += "sex: "+(this.maleBool?"male":"female")+" "
-    }
-    descriptStr += "id: "+this.idNum+" "
-    descriptStr += "job:"+this.job+" "
-    descriptStr += "birthDay "+this.birthStr
-    return descriptStr
-  }
+var tt = {
+  mondayClasses:["英语","英语","数学","数学","基础护理","基础护理","",""],
+  tuesdayClasses:["思修","思修","护理研究","护理研究","","","",""],
+  wednesdayClasses:["生物","生物","物理","物理","基础护理","基础护理","",""],
+  thursdayClasses:["化学","化学","","","营养学","营养学","",""],
+  fridayClasses:["物理","物理","数学","数学","基础护理","基础护理","实验课","实验课"],
 }
 
-var benId = new CardTemplate()
-var lucyId = new CardTemplate()
-var johnId = new CardTemplate()
-benId.init("Ben",true,11344,"1993-12-04")
-lucyId.init("Lucy",false,11942,"1995-11-2")
-johnId.init("John",true,11444,"1991-01-05")
-console.log(benId.nameStr)
-console.log(benId.descript())
-console.log(lucyId.descript())
-console.log(johnId.descript())
-console.log(typeof true)
-console.log("ccc".indexOf("p"))
+ta=new Array()
+ta={a:1,b:3}
+ta[0]=4
+ta[1]=5
+console.log(ta)
+for(var prop in ta){
+  console.log(prop+":"+ta[prop])
+}
+console.log(ta.length)
+console.log(tt["mondayClasses"])
+// for (tEle in tt){
+//   console.log(tt[tEle])
+// }
+var obj = {a:1, b:2, c:3};
 
-function isPrime(n){
-  var isPrimeNum = true
-  for(var b=2;b<n;b++){
-    var mod = n%b
-    if(mod==0){
-      isPrimeNum = false
-      break;
-    }else{
-      isPrimeNum = true
-    }
-  }
-  return isPrimeNum
+for (var prop in obj) {
+  console.log("obj." + prop + " = " + obj[prop]);
 }
-//这个函数就是获取一个数字，然后判断这个数字是不是质数
-//接下来对3到100的数字应用这个函数
-for(var n = 3;n<=100;n++){
-  if(isPrime(n)){
-    console.log(n)
-  }
-}
+var ttArr = new Array()
+ttArr["mon"]=tt.mondayClasses
+ttArr["tue"]=tt.tuesdayClasses
+ttArr["wed"]=tt.wednesdayClasses
+ttArr["thu"]=tt.thursdayClasses
+ttArr["fri"]=tt.fridayClasses
+// console.log(ttArr)
