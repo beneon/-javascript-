@@ -1,0 +1,11 @@
+.body{
+  padding-top: 50px;
+}
+.dialPad{
+  width:200px;
+}
+
+.dialPad .row{
+  height: 50px;
+  width:150px;
+}

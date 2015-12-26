@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Ben">
+  <link href="build/bootstrap/css/normalize.css" rel="stylesheet">
+  <link href="build/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="src/css/resume.css" rel = "stylesheet">
+  <script src = 'build/jquery-1.11.3.js'></script>
+  <script src = 'build/jsrender.js'></script>
+
+</head>
+<body>
+<script id="myTemplate" type="text/x-jsrender">
+  <div class="container">
+  <div class = "row">
+    <div class = "col-md-3 pull-left">
+      <img src="src/{{:photo.src}}" class="{{:photo.cName}}" class="img-rounded">
+    </div>
+    <div class = "col-md-9 pull-right">简历</div>
+  </div>
+  </div>
+</script>
+<div id="result"></div>
+<script src = 'src/main.js'></script>
+</body>
+</html>
