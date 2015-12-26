@@ -1,4 +1,3 @@
-var tmpl = $.templates("#myTemplate")
-var person = {name:"Jim"}
-var people = [{name:"Jim"},{name:"Pedro"}]
-var html = tmpl.render(people)
+$.views.settings.allowCode=true;
+var html = $("#myTemplate").render();
+$("#result").html(html);
