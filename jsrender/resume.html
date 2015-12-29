@@ -18,9 +18,31 @@
   <div class="container">
   <div class = "row">
     <div class = "col-md-3 pull-left">
-      <img src="src/{{:photo.src}}" class="{{:photo.cName}}" class="img-rounded">
+      <img src="{{:photo.src}}" class="{{:photo.cName}}" class="img-rounded">
     </div>
-    <div class = "col-md-9 pull-right">简历</div>
+    <div class = "col-md-9 pull-right">
+      <h1 class="text-primary center-block resumeTitle">简历</h1>
+    </div>
+  </div>
+  <div class = "row">
+    <h2>基本信息</h2>
+    <ul>
+    {{props demographic}}
+    <li>{{:key}}:{{:prop}}</li>
+    {{/props}}
+    </ul>
+    <h2>教育经历</h2>
+    <ul>
+    {{for education}}
+    <li>开始时间：{{:timeSta}}，结束时间：{{:timeEnd}}，学校：{{:school}}，学历：{{:degree}}</li>
+    {{/for}}
+    </ul>
+    <h2>就业经历</h2>
+    <ul>
+    {{for career}}
+    <li>开始时间：{{:timeSta}}，结束时间：{{:timeEnd}}，单位：{{:company}}，职位：{{:occupation}}</li>
+    {{/for}}
+    </ul>
   </div>
   </div>
 </script>
